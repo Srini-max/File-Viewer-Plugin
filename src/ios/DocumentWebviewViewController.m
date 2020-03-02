@@ -42,7 +42,7 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         self.buttonCloseView.frame = CGRectMake([[UIScreen mainScreen] bounds].size.width - 160.0, 30, 160.0, 40.0);
     } else {
-        self.buttonCloseView.frame = CGRectMake([[UIScreen mainScreen] bounds].size.width/2, 50, 160.0, 60.0);
+        self.buttonCloseView.frame = CGRectMake([[UIScreen mainScreen] bounds].size.width/2, 30, 160.0, 40.0);
     }
     [self.view addSubview:self.buttonCloseView];
     
@@ -55,7 +55,7 @@
     //[self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"window.scrollTo(0.0, 50.0)"]];
     
     //Enabling zoom for preview
-    self.webView.scalesPageToFit=YES;
+    //self.webView.scalesPageToFit=YES;
     
     //Handle with rotation on iPhoneX
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rotated:) name:UIDeviceOrientationDidChangeNotification object:nil];
