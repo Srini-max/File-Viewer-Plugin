@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     UINavigationBar *navbar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 80)];
-    navbar.barTintColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.5];
+    navbar.barTintColor = [UIColor colorWithRed:2.0 green:1.0 blue:3.0 alpha:0.5];
     navbar.translucent = NO;
     
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
@@ -42,14 +42,14 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         self.buttonCloseView.frame = CGRectMake([[UIScreen mainScreen] bounds].size.width - 160.0, 30, 160.0, 40.0);
     } else {
-        self.buttonCloseView.frame = CGRectMake([[UIScreen mainScreen] bounds].size.height - 160.0, 30, 160.0, 40.0);
+        self.buttonCloseView.frame = CGRectMake([[UIScreen mainScreen] bounds].size.width - 260.0, 30, 260.0, 40.0);
     }
     [self.view addSubview:self.buttonCloseView];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 70, [[UIScreen mainScreen] bounds].size.width, ([[UIScreen mainScreen] bounds].size.height - 70))];
     } else {
-        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 50, [[UIScreen mainScreen] bounds].size.width, ([[UIScreen mainScreen] bounds].size.height - 50))];
+        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 150, [[UIScreen mainScreen] bounds].size.width, ([[UIScreen mainScreen] bounds].size.height - 150))];
     }
     [[self.webView scrollView] setContentOffset:CGPointMake(0,500) animated:YES];
     [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"window.scrollTo(0.0, 50.0)"]];
@@ -91,7 +91,7 @@
         }
         else if(orientation == UIInterfaceOrientationLandscapeRight) {
             [self.webView setFrame:CGRectMake(35, 50, ([[UIScreen mainScreen] bounds].size.width - 35), ([[UIScreen mainScreen] bounds].size.height - 50))];
-            [self.buttonCloseView setFrame:CGRectMake([[UIScreen mainScreen] bounds].size.height - 160.0, 10, 160.0, 40.0)];
+            [self.buttonCloseView setFrame:CGRectMake([[UIScreen mainScreen] bounds].size.width - 160.0, 10, 160.0, 40.0)];
         }
     }
 }
