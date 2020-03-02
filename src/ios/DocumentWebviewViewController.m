@@ -42,7 +42,7 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         self.buttonCloseView.frame = CGRectMake([[UIScreen mainScreen] bounds].size.width - 160.0, 30, 160.0, 40.0);
     } else {
-        self.buttonCloseView.frame = CGRectMake([[UIScreen mainScreen] bounds].size.Height - 160.0, 30, 160.0, 40.0);
+        self.buttonCloseView.frame = CGRectMake([[UIScreen mainScreen] bounds].size.height - 160.0, 30, 160.0, 40.0);
     }
     [self.view addSubview:self.buttonCloseView];
     
@@ -91,7 +91,7 @@
         }
         else if(orientation == UIInterfaceOrientationLandscapeRight) {
             [self.webView setFrame:CGRectMake(35, 50, ([[UIScreen mainScreen] bounds].size.width - 35), ([[UIScreen mainScreen] bounds].size.height - 50))];
-            [self.buttonCloseView setFrame:CGRectMake([[UIScreen mainScreen] bounds].size.Height - 160.0, 10, 160.0, 40.0)];
+            [self.buttonCloseView setFrame:CGRectMake([[UIScreen mainScreen] bounds].size.height - 160.0, 10, 160.0, 40.0)];
         }
     }
 }
